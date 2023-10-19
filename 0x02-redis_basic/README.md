@@ -7,6 +7,7 @@ Curriculum <br>
 
 ## Resources
 
+
 **Read or watch:**
 
 * [Redis commands](https://www.redis.io/commands/)
