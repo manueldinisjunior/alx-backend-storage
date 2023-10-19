@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-""" Main file """
+"""
+Main file
+"""
+import redis
 
 Cache = __import__('exercise').Cache
-replay = __import__('exercise').replay
 
 cache = Cache()
 
-cache.store("foo")
-cache.store("bar")
-cache.store(42)
-replay(cache.store)
+data = b"hello"
+key = cache.store(data)
+print(key)
+
+local_redis = redis.Redis()
+print(local_redis.get(key))
